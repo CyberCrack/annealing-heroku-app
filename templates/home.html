@@ -10,15 +10,18 @@
 <hr>
 <h2>Valid Values for all the categorical data.</h2>
 <p>validValues = {
-	'family': ["UNK", "ZS", "TN", "GB", "GK", "GS", "ZA", "ZF", "ZH", "ZM"], 'product_type': ["C", "H", "G"],
-	'steel': ["NA", "A", "R", "K", "S", "M", "V", "W"], 'temper_rolling': ["NA", "T"], 'condition': ["NA", "A", "S"],
-	'formability': ["0", "1", "2", "3", "4", "5"], 'non_ageing': ["NA", "N"], 'surface_finish': ["NA", "P", "M"],
-	'surface_quality': ["NA", "D", "E", "F", "G"], 'enamelability': ["NA", "1", "2", "3", "4", "5"], 'bc': ["NA", "Y"], 'bf': ["NA", "Y"],
-	'bt': ["NA", "Y"], 'bw_me': ["NA", "B", "M"], 'bl': ["NA", "Y"], 'm': ["NA", "Y"], 'chrom': ["NA", "C"],
-	'phos': ["NA", "P"], 'cbond': ["NA", "Y"], 'marvi': ["NA", "Y"], 'exptl': ["NA", "Y"], 'ferro': ["NA", "Y"], 'corr': ["NA", "Y"],
-	'blue_bright_varn_clean': ["NA", "B", "C", "V"], 'lustre': ["NA", "Y"], 'jurofm': ["NA", "Y"], 's': ["NA", "Y"], 'p': ["NA", "Y"],
-	'shape': ["COIL", "SHEET"], 'oil': ["NA", "Y", "N"], 'packing': [0, 2, 3]
-}</p>
+    'family': ["UNK", "ZS", "TN", "GB", "GK", "GS", "ZA", "ZF", "ZH", "ZM"], 'product_type': ["C", "H", "G"],
+    'steel': ["NA", "A", "R", "K", "S", "M", "V", "W"], 'temper_rolling': ["NA", "T"], 'condition': ["NA", "A", "S"],
+    'formability': ["0", "1", "2", "3", "4", "5"], 'non_ageing': ["NA", "N"], 'surface_finish': ["NA", "P", "M"],
+    'surface_quality': ["NA", "D", "E", "F", "G"], 'enamelability': ["NA", "1", "2", "3", "4", "5"], 'bc': ["NA", "Y"],
+    'bf': ["NA", "Y"],
+    'bt': ["NA", "Y"], 'bw_me': ["NA", "B", "M"], 'bl': ["NA", "Y"], 'm': ["NA", "Y"], 'chrom': ["NA", "C"],
+    'phos': ["NA", "P"], 'cbond': ["NA", "Y"], 'marvi': ["NA", "Y"], 'exptl': ["NA", "Y"], 'ferro': ["NA", "Y"], 'corr':
+    ["NA", "Y"],
+    'blue_bright_varn_clean': ["NA", "B", "C", "V"], 'lustre': ["NA", "Y"], 'jurofm': ["NA", "Y"], 's': ["NA", "Y"],
+    'p': ["NA", "Y"],
+    'shape': ["COIL", "SHEET"], 'oil': ["NA", "Y", "N"], 'packing': [0, 2, 3]
+    }</p>
 <h2>If you want to do the POST request, please follow the following format: </h2>
 <h2>The POST request has to be sent at URL: https://annealing-metal-prediction.herokuapp.com/api</h2>
 <h2>The body should contain the data in the JSON format :</h2>
@@ -105,351 +108,352 @@
     "bore": 0,
     "packing": 0
     }
-    <hr>
-    <h2>If you want to do PUT request to update the data please follow the following format:</h2>
-    <h2>The PUT request has to be sent at URL: https://annealing-metal-prediction.herokuapp.com/api</h2>
-    <h2>The body should contain the data in the JSON format :</h2>
-    <h2>
-        {
-        "id":&lt;int:id&gt;
-        "family": &lt;str:family&gt;,
-        "product_type": &lt;str:product_type&gt;,
-        "steel": &lt;str:steel&gt;,
-        "carbon": &lt;int:carbon&gt;
-        "hardness": &lt;int:hardness&gt;,
-        "temper_rolling": &lt;str:temper_rolling&gt;,
-        "condition": &lt;str:condition&gt;,
-        "formability": &lt;str:formability&gt;,
-        "strength": &lt;int:strength&gt;,
-        "non_ageing": &lt;str:non_ageing&gt;,
-        "surface_finish": &lt;str:surface_finish&gt;,
-        "surface_quality": &lt;str:surface_quality&gt;,
-        "enamelability": &lt;str:enamelability&gt;,
-        "bc": &lt;str:bc&gt;,
-        "bf": &lt;str:bf&gt;,
-        "bt": &lt;str:bt&gt;,
-        "bw_me": &lt;str:bw_me&gt;,
-        "bl": &lt;str:bl&gt;,
-        "m": &lt;str:m&gt;,
-        "chrom": &lt;str:chrom&gt;,
-        "phos": &lt;str:phos&gt;,
-        "cbond": &lt;str:cbond&gt;,
-        "marvi": &lt;str:marvi&gt;,
-        "exptl": &lt;str:exptl&gt;,
-        "ferro": &lt;str:ferro&gt;,
-        "corr": &lt;str:corr&gt;,
-        "blue_bright_varn_clean": &lt;str:blue_bright_varn_clean&gt;,
-        "lustre": &lt;str:lustre&gt;,
-        "jurofm": &lt;str:jurofm&gt;,
-        "s": &lt;str:s&gt;,
-        "p": &lt;str:p&gt;,
-        "shape": &lt;str:shape&gt;,
-        "thick": &lt;float:thick&gt;,
-        "width": &lt;float:width&gt;,
-        "len": &lt;int:len&gt;,
-        "oil": &lt;str:oil&gt;,
-        "bore": &lt;int:bore&gt;,
-        "packing": &lt;int:packing&gt;
-        }
-    </h2>
-    <h2>NOTE: In this put only the parameters which you want to update and id is mandatory.</h2>
-    <hr>
-    <h2>If you want to do DELETE request to delete the data please follow the following format:</h2>
-    <h2>The PUT request has to be sent at URL: https://annealing-metal-prediction.herokuapp.com/api</h2>
-    <h2>The body should contain the data in the JSON format :</h2>
-    <h2>
-        {
-        "id":&lt;int:id&gt;
-        }
-    </h2>
-    <h2>NOTE: ID is a required parameter.</h2>
-    <hr>
-    <h2>If you just want try it please fill out the following form</h2>
-    <form class="userForm" action="" method="post">
-        <div class="firstCol">
-            <label for="family">Family:</label><br>
-            <select id="family" name="family">
-                <option value="UNK">Unkown/Not Applicable</option>
-                <option value="ZS">ZS</option>
-                <option value="TN">TN</option>
-                <option value="GB">GK</option>
-                <option value="GK">GK</option>
-                <option value="GS">GS</option>
-                <option value="ZA">ZA</option>
-                <option value="ZF">ZF</option>
-                <option value="ZH">ZH</option>
-                <option value="ZM">ZM</option>
-            </select>
-            <br>
-            <br>
-            <label for="product_type">Product Type:</label><br>
-            <select id="product_type" name="product_type">
-                <option value="C">C</option>
-                <option value="H">H</option>
-                <option value="G">G</option>
-            </select>
-            <br>
-            <br>
-            <label for="steel">Steel:</label><br>
-            <select id="steel" name="steel">
-                <option value="NA">Not Applicable</option>
-                <option value="A">A</option>
-                <option value="R">R</option>
-                <option value="K">K</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="V">V</option>
-                <option value="W">W</option>
-            </select>
-            <br>
-            <br>
-            <label for="carbon">Carbon:(Integer values [0-100])</label><br>
-            <input type="text" id="carbon" name="carbon" required><br>
-            <br>
-            <label for="hardness">Hardness:(Integer values [0-100])</label><br>
-            <input type="text" id="hardness" name="hardness" required><br>
-            <br>
-            <br>
-            <label for="temper_rolling">Temper Rolling:</label><br>
-            <select id="temper_rolling" name="temper_rolling">
-                <option value="NA">Not Applicable</option>
-                <option value="T">T</option>
-            </select>
-            <br>
-            <br>
-            <label for="condition">Condition:</label><br>
-            <select id="condition" name="condition">
-                <option value="NA">Not Applicable</option>
-                <option value="A">A</option>
-                <option value="S">S</option>
-            </select>
-            <br>
-            <br>
-            <label for="formability">Formability:</label><br>
-            <select id="formability" name="formability">
-                <option value="0">Not Applicable</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-            <br>
-            <br>
-            <label for="strength">Strength:(Integer values [0-700])</label><br>
-            <input type="text" id="strength" name="strength" required><br>
-            <br>
-            <br>
-            <label for="non_ageing">Non Ageing:</label><br>
-            <select id="non_ageing" name="non_ageing">
-                <option value="NA">Not Applicable</option>
-                <option value="N">N</option>
-            </select>
-            <br>
-            <br>
-            <label for="surface_finish">Surface Finish:</label><br>
-            <select id="surface_finish" name="surface_finish">
-                <option value="NA">Not Applicable</option>
-                <option value="P">P</option>
-                <option value="M">M</option>
-            </select>
-            <br>
-            <br>
-            <label for="surface_quality">Surface Quality:</label><br>
-            <select id="surface_quality" name="surface_quality">
-                <option value="NA">Not Applicable</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
-                <option value="F">F</option>
-                <option value="G">G</option>
-            </select>
-            <br>
-            <br>
-        </div>
-        <div class="secondCol"><label for="enamelability">Enamelability:</label><br>
-            <select id="enamelability" name="enamelability">
-                <option value="NA">Not Applicable</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-            <br>
-            <br>
-            <label for="bc">BC:</label><br>
-            <select id="bc" name="bc">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="bf">BF:</label><br>
-            <select id="bf" name="bf">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="bt">BT:</label><br>
-            <select id="bt" name="bt">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="bw_me">BW/ME:</label><br>
-            <select id="bw_me" name="bw_me">
-                <option value="NA">Not Applicable</option>
-                <option value="B">B</option>
-                <option value="M">M</option>
-            </select>
-            <br>
-            <br>
-            <label for="bl">BL:</label><br>
-            <select id="bl" name="bl">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="m">M:</label><br>
-            <select id="m" name="m">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="chrom">Chrom:</label><br>
-            <select id="chrom" name="chrom">
-                <option value="NA">Not Applicable</option>
-                <option value="C">C</option>
-            </select>
-            <br>
-            <br>
-            <label for="phos">Phos:</label><br>
-            <select id="phos" name="phos">
-                <option value="NA">Not Applicable</option>
-                <option value="P">P</option>
-            </select>
-            <br>
-            <br>
-            <label for="cbond">C-Bond:</label><br>
-            <select id="cbond" name="cbond">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="marvi">Marvi:</label><br>
-            <select id="marvi" name="marvi">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="exptl">Exptl:</label><br>
-            <select id="exptl" name="exptl">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-        </div>
-        <div class="thirdCol">
-            <label for="ferro">Ferro:</label><br>
-            <select id="ferro" name="ferro">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="corr">Corr:</label><br>
-            <select id="corr" name="corr">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="blue_bright_varn_clean">Blue/Bright/Varn/Clean:</label><br>
-            <select id="blue_bright_varn_clean" name="blue_bright_varn_clean">
-                <option value="NA">Not Applicable</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="V">V</option>
-            </select>
-            <br>
-            <br>
-            <label for="lustre">Ferro:</label><br>
-            <select id="lustre" name="lustre">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="jurofm">Corr:</label><br>
-            <select id="jurofm" name="jurofm">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="s">S:</label><br>
-            <select id="s" name="s">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="p">P:</label><br>
-            <select id="p" name="p">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-            </select>
-            <br>
-            <br>
-            <label for="shape">Shape:</label><br>
-            <select id="shape" name="shape">
-                <option value="COIL">Coil</option>
-                <option value="SHEET">Sheet</option>
-            </select>
-            <br>
-            <br>
-            <label for="thick">Thick:(Floating values [0-4])</label><br>
-            <input type="text" id="thick" name="thick" required><br>
-            <br>
-            <br>
-            <label for="width">Width:(Floating values [0-1600])</label><br>
-            <input type="text" id="width" name="width" required><br>
-            <br>
-            <br>
-            <label for="len">Len:(Integer values [0-5000])</label><br>
-            <input type="text" id="len" name="len" required><br>
-            <br>
-            <br>
-            <label for="oil">Oil:</label><br>
-            <select id="oil" name="oil">
-                <option value="NA">Not Applicable</option>
-                <option value="Y">Y</option>
-                <option value="N">N</option>
-            </select>
-            <br>
-            <br>
-            <label for="bore">Bore:(Integer values [0-600])</label><br>
-            <input type="text" id="bore" name="bore" required><br>
-            <br>
-            <br>
-            <label for="packing">Packing:</label><br>
-            <select id="packing" name="packing">
-                <option value=0>0</option>
-                <option value=2>2</option>
-                <option value=3>3</option>
-            </select>
-            <br>
-            <br>
-        </div>
+</h4>
+<hr>
+<h2>If you want to do PUT request to update the data please follow the following format:</h2>
+<h2>The PUT request has to be sent at URL: https://annealing-metal-prediction.herokuapp.com/api</h2>
+<h2>The body should contain the data in the JSON format :</h2>
+<h2>
+    {
+    "id":&lt;int:id&gt;
+    "family": &lt;str:family&gt;,
+    "product_type": &lt;str:product_type&gt;,
+    "steel": &lt;str:steel&gt;,
+    "carbon": &lt;int:carbon&gt;
+    "hardness": &lt;int:hardness&gt;,
+    "temper_rolling": &lt;str:temper_rolling&gt;,
+    "condition": &lt;str:condition&gt;,
+    "formability": &lt;str:formability&gt;,
+    "strength": &lt;int:strength&gt;,
+    "non_ageing": &lt;str:non_ageing&gt;,
+    "surface_finish": &lt;str:surface_finish&gt;,
+    "surface_quality": &lt;str:surface_quality&gt;,
+    "enamelability": &lt;str:enamelability&gt;,
+    "bc": &lt;str:bc&gt;,
+    "bf": &lt;str:bf&gt;,
+    "bt": &lt;str:bt&gt;,
+    "bw_me": &lt;str:bw_me&gt;,
+    "bl": &lt;str:bl&gt;,
+    "m": &lt;str:m&gt;,
+    "chrom": &lt;str:chrom&gt;,
+    "phos": &lt;str:phos&gt;,
+    "cbond": &lt;str:cbond&gt;,
+    "marvi": &lt;str:marvi&gt;,
+    "exptl": &lt;str:exptl&gt;,
+    "ferro": &lt;str:ferro&gt;,
+    "corr": &lt;str:corr&gt;,
+    "blue_bright_varn_clean": &lt;str:blue_bright_varn_clean&gt;,
+    "lustre": &lt;str:lustre&gt;,
+    "jurofm": &lt;str:jurofm&gt;,
+    "s": &lt;str:s&gt;,
+    "p": &lt;str:p&gt;,
+    "shape": &lt;str:shape&gt;,
+    "thick": &lt;float:thick&gt;,
+    "width": &lt;float:width&gt;,
+    "len": &lt;int:len&gt;,
+    "oil": &lt;str:oil&gt;,
+    "bore": &lt;int:bore&gt;,
+    "packing": &lt;int:packing&gt;
+    }
+</h2>
+<h2>NOTE: In this put only the parameters which you want to update and id is mandatory.</h2>
+<hr>
+<h2>If you want to do DELETE request to delete the data please follow the following format:</h2>
+<h2>The PUT request has to be sent at URL: https://annealing-metal-prediction.herokuapp.com/api</h2>
+<h2>The body should contain the data in the JSON format :</h2>
+<h2>
+    {
+    "id":&lt;int:id&gt;
+    }
+</h2>
+<h2>NOTE: ID is a required parameter.</h2>
+<hr>
+<h2>If you just want try it please fill out the following form</h2>
+<form class="userForm" action="" method="post">
+    <div class="firstCol">
+        <label for="family">Family:</label><br>
+        <select id="family" name="family">
+            <option value="UNK">Unkown/Not Applicable</option>
+            <option value="ZS">ZS</option>
+            <option value="TN">TN</option>
+            <option value="GB">GK</option>
+            <option value="GK">GK</option>
+            <option value="GS">GS</option>
+            <option value="ZA">ZA</option>
+            <option value="ZF">ZF</option>
+            <option value="ZH">ZH</option>
+            <option value="ZM">ZM</option>
+        </select>
         <br>
-        <input type="submit" value="Submit">
-    </form>
+        <br>
+        <label for="product_type">Product Type:</label><br>
+        <select id="product_type" name="product_type">
+            <option value="C">C</option>
+            <option value="H">H</option>
+            <option value="G">G</option>
+        </select>
+        <br>
+        <br>
+        <label for="steel">Steel:</label><br>
+        <select id="steel" name="steel">
+            <option value="NA">Not Applicable</option>
+            <option value="A">A</option>
+            <option value="R">R</option>
+            <option value="K">K</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="V">V</option>
+            <option value="W">W</option>
+        </select>
+        <br>
+        <br>
+        <label for="carbon">Carbon:(Integer values [0-100])</label><br>
+        <input type="text" id="carbon" name="carbon" required><br>
+        <br>
+        <label for="hardness">Hardness:(Integer values [0-100])</label><br>
+        <input type="text" id="hardness" name="hardness" required><br>
+        <br>
+        <br>
+        <label for="temper_rolling">Temper Rolling:</label><br>
+        <select id="temper_rolling" name="temper_rolling">
+            <option value="NA">Not Applicable</option>
+            <option value="T">T</option>
+        </select>
+        <br>
+        <br>
+        <label for="condition">Condition:</label><br>
+        <select id="condition" name="condition">
+            <option value="NA">Not Applicable</option>
+            <option value="A">A</option>
+            <option value="S">S</option>
+        </select>
+        <br>
+        <br>
+        <label for="formability">Formability:</label><br>
+        <select id="formability" name="formability">
+            <option value="0">Not Applicable</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br>
+        <br>
+        <label for="strength">Strength:(Integer values [0-700])</label><br>
+        <input type="text" id="strength" name="strength" required><br>
+        <br>
+        <br>
+        <label for="non_ageing">Non Ageing:</label><br>
+        <select id="non_ageing" name="non_ageing">
+            <option value="NA">Not Applicable</option>
+            <option value="N">N</option>
+        </select>
+        <br>
+        <br>
+        <label for="surface_finish">Surface Finish:</label><br>
+        <select id="surface_finish" name="surface_finish">
+            <option value="NA">Not Applicable</option>
+            <option value="P">P</option>
+            <option value="M">M</option>
+        </select>
+        <br>
+        <br>
+        <label for="surface_quality">Surface Quality:</label><br>
+        <select id="surface_quality" name="surface_quality">
+            <option value="NA">Not Applicable</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+        </select>
+        <br>
+        <br>
+    </div>
+    <div class="secondCol"><label for="enamelability">Enamelability:</label><br>
+        <select id="enamelability" name="enamelability">
+            <option value="NA">Not Applicable</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br>
+        <br>
+        <label for="bc">BC:</label><br>
+        <select id="bc" name="bc">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="bf">BF:</label><br>
+        <select id="bf" name="bf">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="bt">BT:</label><br>
+        <select id="bt" name="bt">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="bw_me">BW/ME:</label><br>
+        <select id="bw_me" name="bw_me">
+            <option value="NA">Not Applicable</option>
+            <option value="B">B</option>
+            <option value="M">M</option>
+        </select>
+        <br>
+        <br>
+        <label for="bl">BL:</label><br>
+        <select id="bl" name="bl">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="m">M:</label><br>
+        <select id="m" name="m">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="chrom">Chrom:</label><br>
+        <select id="chrom" name="chrom">
+            <option value="NA">Not Applicable</option>
+            <option value="C">C</option>
+        </select>
+        <br>
+        <br>
+        <label for="phos">Phos:</label><br>
+        <select id="phos" name="phos">
+            <option value="NA">Not Applicable</option>
+            <option value="P">P</option>
+        </select>
+        <br>
+        <br>
+        <label for="cbond">C-Bond:</label><br>
+        <select id="cbond" name="cbond">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="marvi">Marvi:</label><br>
+        <select id="marvi" name="marvi">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="exptl">Exptl:</label><br>
+        <select id="exptl" name="exptl">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+    </div>
+    <div class="thirdCol">
+        <label for="ferro">Ferro:</label><br>
+        <select id="ferro" name="ferro">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="corr">Corr:</label><br>
+        <select id="corr" name="corr">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="blue_bright_varn_clean">Blue/Bright/Varn/Clean:</label><br>
+        <select id="blue_bright_varn_clean" name="blue_bright_varn_clean">
+            <option value="NA">Not Applicable</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="V">V</option>
+        </select>
+        <br>
+        <br>
+        <label for="lustre">Ferro:</label><br>
+        <select id="lustre" name="lustre">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="jurofm">Corr:</label><br>
+        <select id="jurofm" name="jurofm">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="s">S:</label><br>
+        <select id="s" name="s">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="p">P:</label><br>
+        <select id="p" name="p">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+        </select>
+        <br>
+        <br>
+        <label for="shape">Shape:</label><br>
+        <select id="shape" name="shape">
+            <option value="COIL">Coil</option>
+            <option value="SHEET">Sheet</option>
+        </select>
+        <br>
+        <br>
+        <label for="thick">Thick:(Floating values [0-4])</label><br>
+        <input type="text" id="thick" name="thick" required><br>
+        <br>
+        <br>
+        <label for="width">Width:(Floating values [0-1600])</label><br>
+        <input type="text" id="width" name="width" required><br>
+        <br>
+        <br>
+        <label for="len">Len:(Integer values [0-5000])</label><br>
+        <input type="text" id="len" name="len" required><br>
+        <br>
+        <br>
+        <label for="oil">Oil:</label><br>
+        <select id="oil" name="oil">
+            <option value="NA">Not Applicable</option>
+            <option value="Y">Y</option>
+            <option value="N">N</option>
+        </select>
+        <br>
+        <br>
+        <label for="bore">Bore:(Integer values [0-600])</label><br>
+        <input type="text" id="bore" name="bore" required><br>
+        <br>
+        <br>
+        <label for="packing">Packing:</label><br>
+        <select id="packing" name="packing">
+            <option value=0>0</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+        </select>
+        <br>
+        <br>
+    </div>
+    <br>
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>
