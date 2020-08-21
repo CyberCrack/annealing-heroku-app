@@ -1,5 +1,9 @@
-import sqlite3
-conn = sqlite3.connect('annealingDB.db', check_same_thread=False)
+import os
+
+import psycopg2
+
+DATABASE_URL = os.environ['DATABASE_URL']
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 cursor = conn.cursor()
 
 cursor.execute("SELECT * FROM annealing;")

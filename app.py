@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, render_template
 
-import Database
+# import SQLite3Database as Database
+import PostgresqlDatabase as Database
 from DeployableModel import getPredictions
 
 app = Flask(__name__)
@@ -129,7 +130,7 @@ def deleteAPI():
 		return jsonify("ERROR: id should be a int value")
 
 	updateCount = Database.deleteData(id=id)
-	if updateCount != 0:
+	if updateCount != 0 and updateCount is not None:
 		return jsonify(id=id, Successful=True)
 	else:
 		return jsonify(id=id, Successful=False)
@@ -137,4 +138,4 @@ def deleteAPI():
 
 # driver function
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run(debug=False)
